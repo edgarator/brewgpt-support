@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrewGPT Support</title>
+    <style>
+        :root {
+            --primary: #8B4513;
+            --primary-light: #A0522D;
+            --bg: #FDF8F3;
+            --text: #2C1810;
+            --text-light: #5D4037;
+            --card-bg: #FFFFFF;
+            --border: #D7CCC8;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #1A1412;
+                --text: #F5F0EB;
+                --text-light: #BCAAA4;
+                --card-bg: #2C2220;
+                --border: #4E342E;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            color: var(--text-light);
+            font-size: 1.1em;
+        }
+
+        h2 {
+            color: var(--primary);
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        h3 {
+            color: var(--text);
+            margin: 25px 0 10px;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .faq-item summary {
+            font-weight: 600;
+            cursor: pointer;
+            color: var(--primary);
+            padding: 5px 0;
+        }
+
+        .faq-item summary:hover {
+            color: var(--primary-light);
+        }
+
+        .faq-item p {
+            margin-top: 15px;
+            color: var(--text-light);
+        }
+
+        .contact-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .contact-card a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .feature-card .icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .feature-card h4 {
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 1px solid var(--border);
+            color: var(--text-light);
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">☕</div>
+            <h1>BrewGPT Support</h1>
+            <p class="tagline">Your AI-powered espresso companion</p>
+        </header>
+
+        <section>
+            <h2>Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">📝</div>
+                    <h4>Brew Logging</h4>
+                    <p>Track your espresso shots with customizable fields for dose, yield, time, grind size, and more.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🤖</div>
+                    <h4>AI Advice</h4>
+                    <p>Get personalized suggestions from Professor Bean to improve your next shot based on your taste feedback.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⌚</div>
+                    <h4>Watch Timer</h4>
+                    <p>Time your shots directly from your Apple Watch with preinfusion tracking.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📊</div>
+                    <h4>Brew History</h4>
+                    <p>Review and analyze your brewing patterns over time to perfect your technique.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🌤️</div>
+                    <h4>Weather Tracking</h4>
+                    <p>Automatically capture temperature, humidity, and pressure to understand environmental impacts.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📷</div>
+                    <h4>Brew Cards</h4>
+                    <p>Share beautiful brew cards with your shot photo and Professor Bean's reaction.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Frequently Asked Questions</h2>
+
+            <h3>Getting Started</h3>
+
+            <details class="faq-item">
+                <summary>How do I log my first brew?</summary>
+                <p>Open BrewGPT and tap the "New Brew" tab. Select your brewing preset (Espresso, Pour Over, etc.), fill in the quick-entry fields like dose, yield, and brew time, then tap "Save & Rate" to log your brew and get AI advice.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>What presets are available?</summary>
+                <p>BrewGPT includes presets for Espresso, Pour Over (V60), French Press, AeroPress, Moka Pot, and Cold Brew. Each preset comes with relevant fields pre-configured for that brewing method.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Can I customize the fields shown?</summary>
+                <p>Yes! Tap the settings icon in the New Brew screen to toggle which fields appear in quick entry. You can also add custom numeric fields specific to your workflow.</p>
+            </details>
+
+            <h3>AI Advice & Professor Bean</h3>
+
+            <details class="faq-item">
+                <summary>How does the AI advice work?</summary>
+                <p>After logging a brew, rate it with thumbs up or down and select taste notes (sour, bitter, balanced, etc.). Professor Bean analyzes your parameters and feedback to suggest specific adjustments for your next shot.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Why are Professor Bean's suggestions sometimes different?</summary>
+                <p>Professor Bean considers multiple factors including your brew parameters, taste feedback, and brewing trends. Suggestions are personalized to help you dial in based on your specific feedback.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>What do the different Professor Bean images mean?</summary>
+                <p>Professor Bean's appearance reflects the nature of the advice - celebrating great shots, offering encouragement for near-misses, or providing stern guidance when major adjustments are needed.</p>
+            </details>
+
+            <h3>Apple Watch</h3>
+
+            <details class="faq-item">
+                <summary>How do I use the Watch timer?</summary>
+                <p>Open BrewGPT on your Apple Watch, then press and hold to start the timer. Tap once to mark preinfusion complete and continue to full brew time. When done, the "Send & Reset" button sends times to your iPhone.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Why aren't my Watch times appearing on iPhone?</summary>
+                <p>Make sure both devices are connected (Bluetooth enabled, Watch paired). After tapping "Send & Reset" on your Watch, open the New Brew screen on iPhone - the times should auto-fill. If not, try restarting both apps.</p>
+            </details>
+
+            <h3>Weather & Location</h3>
+
+            <details class="faq-item">
+                <summary>Why does BrewGPT need my location?</summary>
+                <p>Location is used only to fetch local weather conditions (temperature, humidity, pressure) which can affect extraction. This data stays on your device and is never shared. You can disable this in Settings.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Can I use the app without location access?</summary>
+                <p>Absolutely! Location is optional. Weather fields simply won't auto-fill, but you can still log all other brew parameters normally.</p>
+            </details>
+
+            <h3>Bluetooth & Scale</h3>
+
+            <details class="faq-item">
+                <summary>Which coffee scales are supported?</summary>
+                <p>BrewGPT supports Bluetooth-enabled scales including Acaia, Decent, Skale, and Felicita. More scales are being added based on user feedback.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>My scale won't connect. What should I do?</summary>
+                <p>Ensure Bluetooth is enabled on your iPhone, the scale is powered on and in pairing mode, and no other apps are connected to it. Try toggling Bluetooth off/on and restarting the scale.</p>
+            </details>
+
+            <h3>Data & Privacy</h3>
+
+            <details class="faq-item">
+                <summary>Is my brew data stored in the cloud?</summary>
+                <p>Currently, all data is stored locally on your device. Cloud sync is planned for a future update.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>Can I export my brew history?</summary>
+                <p>Yes! Go to the History tab and tap the export button to export your brews as a CSV file for analysis in spreadsheets or other tools.</p>
+            </details>
+
+            <details class="faq-item">
+                <summary>How do I delete my data?</summary>
+                <p>Individual brews can be deleted by swiping left in the History view. To delete all data, uninstall and reinstall the app.</p>
+            </details>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <div class="contact-card">
+                <p>Still need help? We're here for you!</p>
+                <p style="margin-top: 15px; font-size: 1.2em;">
+                    📧 <a href="mailto:support@brewgpt.app">support@brewgpt.app</a>
+                </p>
+                <p style="margin-top: 10px; color: var(--text-light);">
+                    We typically respond within 24-48 hours.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Privacy Policy</h2>
+            <div class="faq-item">
+                <p><strong>Data Collection:</strong> BrewGPT collects only the brew data you enter and optional location data for weather features. We do not collect personal information beyond what's necessary for app functionality.</p>
+                <p style="margin-top: 15px;"><strong>Data Storage:</strong> All brew data is stored locally on your device. Weather location data is used only to fetch current conditions and is not stored or transmitted to third parties.</p>
+                <p style="margin-top: 15px;"><strong>Third Parties:</strong> We use OpenAI's API for AI advice generation. Brew parameters (not personal data) are sent to generate suggestions. We use WeatherAPI.com for weather data.</p>
+                <p style="margin-top: 15px;"><strong>Your Rights:</strong> You can delete all your data at any time by uninstalling the app. You can disable location access in iOS Settings without affecting core functionality.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 BrewGPT. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="mailto:support@brewgpt.app">Contact</a> ·
+                <a href="#privacy-policy">Privacy</a>
+            </p>
+            <p style="margin-top: 20px; font-size: 0.85em;">
+                Made with ☕ for coffee lovers everywhere
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
