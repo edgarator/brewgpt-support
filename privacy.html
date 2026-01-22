@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - BrewGPT</title>
+    <style>
+        :root {
+            --primary: #8B4513;
+            --primary-light: #A0522D;
+            --bg: #FDF8F3;
+            --text: #2C1810;
+            --text-light: #5D4037;
+            --card-bg: #FFFFFF;
+            --border: #D7CCC8;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #1A1412;
+                --text: #F5F0EB;
+                --text-light: #BCAAA4;
+                --card-bg: #2C2220;
+                --border: #4E342E;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+            border-radius: 50%;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .updated {
+            color: var(--text-light);
+            font-size: 0.95em;
+        }
+
+        h2 {
+            color: var(--primary);
+            margin: 35px 0 15px;
+            font-size: 1.4em;
+        }
+
+        h3 {
+            color: var(--text);
+            margin: 25px 0 10px;
+            font-size: 1.1em;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        ul {
+            margin: 15px 0;
+            padding-left: 25px;
+            color: var(--text-light);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .summary-table th,
+        .summary-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .summary-table th {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .summary-table td {
+            color: var(--text-light);
+        }
+
+        .check {
+            color: #4CAF50;
+        }
+
+        .cross {
+            color: #F44336;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .tldr {
+            background: var(--primary);
+            color: white;
+            padding: 20px 25px;
+            border-radius: 12px;
+            margin: 30px 0;
+        }
+
+        .tldr strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+            border-top: 1px solid var(--border);
+            color: var(--text-light);
+            font-size: 0.9em;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← Back to Support</a>
+
+        <header>
+            <img src="logo.png" alt="Professor Bean" class="logo">
+            <h1>Privacy Policy</h1>
+            <p class="updated">Last Updated: January 22, 2026</p>
+        </header>
+
+        <div class="tldr">
+            <strong>TL;DR</strong>
+            Your brew data stays on your device. We only access location (if you allow it) to show weather, and we only send brew parameters (not personal info) when you ask Professor Bean for advice.
+        </div>
+
+        <section>
+            <h2>Introduction</h2>
+            <p>BrewGPT ("we", "our", or "the app") is a coffee brewing companion app designed to help you track and improve your brews. We are committed to protecting your privacy and being transparent about how we handle your data.</p>
+        </section>
+
+        <section>
+            <h2>Data We Collect</h2>
+
+            <h3>Brew Data (Stored Locally)</h3>
+            <ul>
+                <li>Brew parameters you enter (dose, yield, time, grind size, etc.)</li>
+                <li>Brew ratings and notes</li>
+                <li>Custom fields you create</li>
+            </ul>
+            <p><strong>This data is stored only on your device</strong> using Apple's SwiftData framework. We do not have access to your brew records.</p>
+
+            <h3>Location Data (Optional)</h3>
+            <p>If you enable weather auto-fill, we request access to your location to:</p>
+            <ul>
+                <li>Fetch current weather conditions (temperature, humidity, pressure)</li>
+                <li>Display weather data alongside your brew records</li>
+            </ul>
+            <p><strong>Your location is:</strong></p>
+            <ul>
+                <li>Only accessed when you explicitly enable weather features</li>
+                <li>Used solely to fetch weather data from WeatherAPI.com</li>
+                <li>Never stored or tracked by us</li>
+                <li>Processed according to <a href="https://www.weatherapi.com/privacy.aspx" target="_blank">WeatherAPI.com's Privacy Policy</a></li>
+            </ul>
+
+            <h3>AI Advice Feature</h3>
+            <p>When you request brewing advice from Professor Bean:</p>
+            <ul>
+                <li>Your brew parameters (dose, yield, time, grind, rating) are sent to our AI service</li>
+                <li>This data is used only to generate personalized brewing recommendations</li>
+                <li>No personally identifiable information is transmitted</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Data We Do NOT Collect</h2>
+            <ul>
+                <li>Personal identification (name, email, phone)</li>
+                <li>Device identifiers or advertising IDs</li>
+                <li>Usage analytics or telemetry</li>
+                <li>Photos (any photos you take for brew cards stay on your device)</li>
+                <li>Financial information</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Summary</h2>
+            <div class="card">
+                <table class="summary-table">
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Collected</th>
+                        <th>Stored</th>
+                        <th>Shared</th>
+                    </tr>
+                    <tr>
+                        <td>Brew records</td>
+                        <td>Yes (you enter it)</td>
+                        <td>On device only</td>
+                        <td><span class="cross">No</span></td>
+                    </tr>
+                    <tr>
+                        <td>Location</td>
+                        <td>Only if enabled</td>
+                        <td><span class="cross">Never</span></td>
+                        <td>WeatherAPI (temp.)</td>
+                    </tr>
+                    <tr>
+                        <td>Brew params for AI</td>
+                        <td>When you request advice</td>
+                        <td><span class="cross">No</span></td>
+                        <td>AI provider (temp.)</td>
+                    </tr>
+                    <tr>
+                        <td>Personal info</td>
+                        <td><span class="cross">No</span></td>
+                        <td><span class="cross">No</span></td>
+                        <td><span class="cross">No</span></td>
+                    </tr>
+                    <tr>
+                        <td>Analytics</td>
+                        <td><span class="cross">No</span></td>
+                        <td><span class="cross">No</span></td>
+                        <td><span class="cross">No</span></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>Third-Party Services</h2>
+
+            <h3>WeatherAPI.com</h3>
+            <p>Used to fetch weather conditions when you enable weather auto-fill.</p>
+            <p>Privacy Policy: <a href="https://www.weatherapi.com/privacy.aspx" target="_blank">weatherapi.com/privacy.aspx</a></p>
+
+            <h3>AI Service Provider</h3>
+            <p>Used to generate brewing advice from Professor Bean.</p>
+            <ul>
+                <li>Only brew parameters are shared (no personal data)</li>
+                <li>Data is not stored or used for training</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Data Storage & Security</h2>
+            <ul>
+                <li>All brew data is stored locally on your device</li>
+                <li>Data is protected by your device's built-in security (passcode, Face ID, Touch ID)</li>
+                <li>We do not operate servers that store your personal data</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Your Rights</h2>
+            <p>You have full control over your data:</p>
+            <ul>
+                <li><strong>Access:</strong> All your data is visible within the app</li>
+                <li><strong>Delete:</strong> Delete individual brews or all data through the app</li>
+                <li><strong>Location:</strong> Revoke location permission anytime in iOS Settings</li>
+                <li><strong>Export:</strong> Your data stays on your device and can be backed up via iCloud</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Children's Privacy</h2>
+            <p>BrewGPT does not knowingly collect data from children under 13. The app is designed for coffee enthusiasts of legal age to consume caffeine.</p>
+        </section>
+
+        <section>
+            <h2>Changes to This Policy</h2>
+            <p>We may update this privacy policy from time to time. We will notify you of any changes by updating the "Last Updated" date at the top of this policy.</p>
+        </section>
+
+        <section>
+            <h2>Contact Us</h2>
+            <div class="card">
+                <p>If you have questions about this privacy policy, please contact us at:</p>
+                <p style="margin-top: 15px; font-size: 1.1em;">
+                    📧 <a href="mailto:support@edgar.design">support@edgar.design</a>
+                </p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 BrewGPT. All rights reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="index.html">Support</a> ·
+                <a href="mailto:support@edgar.design">Contact</a>
+            </p>
+            <p style="margin-top: 20px; font-size: 0.85em;">
+                Made with ☕ for coffee lovers everywhere
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
