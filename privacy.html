@@ -181,12 +181,12 @@
         <header>
             <img src="logo.png" alt="Professor Bean" class="logo">
             <h1>Privacy Policy</h1>
-            <p class="updated">Last Updated: January 22, 2026</p>
+            <p class="updated">Last Updated: January 23, 2026</p>
         </header>
 
         <div class="tldr">
             <strong>TL;DR</strong>
-            Your brew data stays on your device. We only access location (if you allow it) to show weather. Professor Bean's advice is generated on-device using Apple Intelligence — nothing is sent to external servers.
+            Your brew data stays on your device. We only access location (if you allow it) to show weather. Professor Bean's advice can be generated via OpenAI (cloud) or Apple Intelligence (on-device) — only anonymous brew parameters are sent, never personal information.
         </div>
 
         <section>
@@ -220,12 +220,13 @@
             </ul>
 
             <h3>AI Advice Feature</h3>
-            <p>When you request brewing advice from Professor Bean:</p>
+            <p>When you request brewing advice from Professor Bean, the app uses a tiered approach:</p>
             <ul>
-                <li>Your brew parameters are processed on-device using Apple Intelligence</li>
-                <li>All AI processing happens locally - no data is sent to external servers</li>
-                <li>Your brewing data never leaves your device</li>
+                <li><strong>OpenAI (Primary):</strong> When online, your brew parameters (grind size, dose, yield, taste notes, etc.) may be sent to OpenAI's API to generate personalized advice. No personal information, account details, or device identifiers are included — only the brewing data needed for the advice.</li>
+                <li><strong>Apple Intelligence (Fallback):</strong> On supported devices, advice can be generated entirely on-device using Apple Intelligence, with no data sent externally.</li>
+                <li><strong>Offline Mode:</strong> When offline, rule-based advice is provided locally without any network requests.</li>
             </ul>
+            <p>Usage is limited to 5 OpenAI requests per day to manage costs. A counter for this limit is stored securely in your device's Keychain (this counter persists even if the app is deleted, but contains no personal data).</p>
         </section>
 
         <section>
@@ -265,7 +266,7 @@
                         <td>Brew params for AI</td>
                         <td>When you request advice</td>
                         <td>On device only</td>
-                        <td><span class="cross">No</span></td>
+                        <td>OpenAI (when online)</td>
                     </tr>
                     <tr>
                         <td>Personal info</td>
@@ -286,16 +287,25 @@
         <section>
             <h2>Third-Party Services</h2>
 
+            <h3>OpenAI</h3>
+            <p>Used to generate Professor Bean's brewing advice when online.</p>
+            <ul>
+                <li>Only brew parameters are sent (grind size, dose, yield, time, taste notes)</li>
+                <li>No personal information, device IDs, or account details are transmitted</li>
+                <li>Requests are limited to 5 per day</li>
+            </ul>
+            <p>Privacy Policy: <a href="https://openai.com/privacy" target="_blank">openai.com/privacy</a></p>
+
             <h3>WeatherAPI.com</h3>
             <p>Used to fetch weather conditions when you enable weather auto-fill.</p>
             <p>Privacy Policy: <a href="https://www.weatherapi.com/privacy.aspx" target="_blank">weatherapi.com/privacy.aspx</a></p>
 
             <h3>Apple Intelligence (On-Device)</h3>
-            <p>Professor Bean's brewing advice is generated using Apple Intelligence, which runs entirely on your device.</p>
+            <p>On supported devices, Professor Bean can generate advice using Apple Intelligence as an alternative to OpenAI.</p>
             <ul>
                 <li>All AI processing happens locally on your iPhone</li>
                 <li>No brew data is sent to external servers</li>
-                <li>Your data never leaves your device</li>
+                <li>Used as a fallback when OpenAI is unavailable or daily limit is reached</li>
             </ul>
         </section>
 
